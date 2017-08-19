@@ -298,4 +298,10 @@ impl<I: ImageSize> Scene<I> {
     pub fn children(&self) -> &Vec<Sprite<I>> {
         &self.children
     }
+
+    /// Get the mutable list of top-level (non-child) sprites.
+    #[inline(always)]
+    pub fn children_mut(&mut self) -> &Vec<Sprite<I>> {
+        &mut self.children
+    }
 }
